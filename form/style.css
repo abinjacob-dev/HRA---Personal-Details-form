@@ -82,6 +82,7 @@ input, select {
     border: 1px solid var(--border-color);
     border-radius: 5px;
 }
+
 textarea {
     width: 100%;
     padding: 10px;
@@ -94,6 +95,12 @@ textarea:focus {
     border-color: var(--primary-color);
 }
 
+.dropdown {
+    display: none;
+    margin-top: 10px;
+}
+
+
 @media (max-width: 768px) {
     .main-container {
         grid-template-columns: repeat(1, 1fr);
@@ -105,4 +112,8 @@ textarea:focus {
         overflow: hidden;
         align-items: center;
     }
+    h2{
+        max-width: 400px;
+    }
+    
 }

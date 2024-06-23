@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
     <title>Document</title>
 </head>
 <body>
@@ -60,7 +61,6 @@
                 </div>
             </div>
             
-
             <!--Section B : Contact Information & Residence Details-->
             <div class="containerHigh">
                 <h2>Contact/Residential Information</h2>
@@ -87,7 +87,6 @@
                 </div>
             </div>
             
-
             <!--Section C : Family Information-->
             <div class="containerHigh">
                 <h2>Family Information</h2>
@@ -123,7 +122,6 @@
                 </div>
             </div>
             
-
             <!--Section D : Health and Disability Details-->
             <div class="containerHigh">
                 <h2>Health and Disability Details</h2>
@@ -165,7 +163,12 @@
     
                     <div class="form-group">
                         <label for="percentage">Percentage of Disability:</label>
-                        <input type="number" id="percentage" name="percentage" min="0" max="100" step="0.01">
+                        <select id="percentage" name="percentage">
+                            <option value="below-40">Below 40</option>
+                            <option value="40-50">40-50</option>
+                            <option value="50-80">50-80</option>
+                            <option value="80-above">80 and Above</option>
+                        </select>
                     </div>
     
                     <div class="form-group">
@@ -175,12 +178,147 @@
                             <option value="not-recieved">Not Recieved</option>
                         </select>
                     </div>
+                    <div class="form-group">
+                        <label for="ceritificate-file">Upload Certificate</label>
+                        <input type="file" name="ceritificate-file" id="ceritificate-file">
+                    </div>
+                    <div class="form-group">
+                        <label for="adl-support">Continuous support for ADL needed?</label>
+                        <select name="adl-support" id="adl-support">
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
+                        </select>
+                    </div>
                 </div>
             </div>
             
+            <div class="containerHigh">
+                <h2>Abuses faced</h2>
+                <div class="main-container">
+                    <div class="form-group">
+                        <label for="physical-valence">Physical Valence</label>
+                        <select name="physical-valence" id="physical-valence">
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
+                            <option value="not-interest">Not interested to disclose</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="source-abuse">Source of Abuse</label>
+                        <select name="source-abuse" id="source-abuse">
+                            <option value="family">Family</option>
+                            <option value="neighborhood">Neighborhood</option>
+                            <option value="public-Space">public Space</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="mental-abuse">Mental Abuse</label>
+                        <select name="mental-abuse" id="mental-abuse">
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
+                            <option value="not-interest">Not interested to disclose</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="source-abuse-mental">Source of Mental Abuse</label>
+                        <select name="source-abuse-mental" id="source-abuse-mental">
+                            <option value="family">Family</option>
+                            <option value="neighborhood">Neighborhood</option>
+                            <option value="public-Space">public Space</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
 
-            <!--Section C : Social Status of Differentially Abled-->
-
+            <!--Section II : Social Status of Differentially Abled-->
+            <div class="containerHigh">
+                <h2>Social Status of Differentially Abled</h2>
+                <div class="main-container">
+                    <div class="form-group">
+                        <label for="category">Category</label>
+                        <select name="category" id="category">
+                            <option value="general">General</option>
+                            <option value="obc">OBC</option>
+                            <option value="oec">OEC</option>
+                            <option value="sc">SC</option>
+                            <option value="st">ST</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="classification">Classification</label>
+                        <select name="classification" id="classification">
+                            <option value="apl">APL</option>
+                            <option value="bpl">BPL</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="religion">Religion</label>
+                        <select name="religion" id="religion">
+                            <option value="hindu">Hindu</option>
+                            <option value="muslim">Muslim</option>
+                            <option value="christian">Christian</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <div class="question">
+                            <label for="have-social-protection">Social Protection</label>
+                            <select id="have-social-protection" name="question">
+                                <option value="no">No</option>
+                                <option value="yes">Yes</option>
+                            </select>
+                            <div class="dropdown">
+                                <select id="social-protection">
+                                    <option value="family">Family</option>
+                                    <option value="neighborhood">Neighborhood</option>
+                                    <option value="friends">Friends</option>
+                                    <option value="relatives">Relatives</option>
+                                </select>
+                            </div>
+                        </div>
+                
+                        
+                    </div>
+                    <div class="form-group">
+                        <div class="question">
+                            <label for="have-participation">Participation</label>
+                            <select id="have-participation" name="question">
+                                <option value="no">No</option>
+                                <option value="yes">Yes</option>
+                            </select>
+                            <div class="dropdown">
+                                <select id="participation">
+                                    <option value="nhg">NHG</option>
+                                    <option value="special-grama-sabha">Special Grama Sabha</option>
+                                    <option value="grama-sabha">Grama Sabha</option>
+                                    <option value="organisation">Organisation</option>
+                                    <option value="library">Library</option>
+                                    <option value="labour-card">Labour Card</option>
+                                </select>
+                            </div>
+                        </div>
+                
+                        
+                    </div>
+                    <div class="form-group">
+                        <label for="participation-in-family-decition">Participation in Family Decision</label>
+                        <select name="participation-in-family-decition" id="participation-in-family-decition">
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="freedom-for-personnel-decision">Freedom for personnel decision</label>
+                        <select name="freedom-for-personnel-decision" id="freedom-for-personnel-decision">
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            
+            <!--Section III : Echonomic Status-->
+            
         </form>
     </main>
 </body>
