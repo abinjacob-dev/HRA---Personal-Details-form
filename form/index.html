@@ -26,45 +26,10 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="Gender">Gender:</label>
-                        <select id="Gender" name="Gender" required>
-                            <option value="male">Male</option>
-                            <option value="female">Female</option>
-                            <option value="trans">Trans</option>
-                        </select>
+                        <label for="Address">Address:</label>
+                        <textarea id="Address" name="Address" rows="1" required></textarea>
                     </div>
 
-                    <div class="form-group">
-                        <label for="Martial_Status">Marital Status:</label>
-                        <select id="Martial_Status" name="Martial_Status" required>
-                            <option value="unmarried">Unmarried</option>
-                            <option value="married">Married</option>
-                            <option value="widow">Widow</option>
-                            <option value="widower">Widower</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="aadthar_no">Aadhar Number:</label>
-                        <input type="tel" id="aadthar_no" name="aadthar_no" placeholder="0000111100001111" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="uid">Have UID:</label>
-                        <input type="tel" id="uid" name="uid" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="reasonOrnumber">number/reason:</label>
-                        <input type="tel" id="reasonOrnumber" name="reasonOrnumber" required>
-                    </div>
-                </div>
-            </div>
-            
-            <!--Section B : Contact Information & Residence Details-->
-            <div class="containerHigh">
-                <h2>Contact/Residential Information</h2>
-                <div class="main-container">
                     <div class="form-group">
                         <label for="Phone_no">Phone No:</label>
                         <input type="tel" id="Phone_no" name="Phone_no" required>
@@ -81,15 +46,19 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="Address">Address:</label>
-                        <textarea id="Address" name="Address" rows="1" required></textarea>
+                        <label for="Gender">Gender:</label>
+                        <select id="Gender" name="Gender" required>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="trans">Trans</option>
+                        </select>
                     </div>
                 </div>
             </div>
             
-            <!--Section C : Family Information-->
+            <!--Section B : Personal Information-->
             <div class="containerHigh">
-                <h2>Family Information</h2>
+                <h2>Personal Information</h2>
                 <div class="main-container">
                     <div class="form-group">
                         <label for="care-taker-name">Caretaker's Name:</label>
@@ -119,13 +88,22 @@
                             <option value="none-alive">None of Parents Alive</option>
                         </select>
                     </div>
-                </div>
-            </div>
-            
-            <!--Section D : Health and Disability Details-->
-            <div class="containerHigh">
-                <h2>Health and Disability Details</h2>
-                <div class="main-container">
+
+                    <div class="form-group">
+                        <label for="Martial_Status">Marital Status:</label>
+                        <select id="Martial_Status" name="Martial_Status" required>
+                            <option value="unmarried">Unmarried</option>
+                            <option value="married">Married</option>
+                            <option value="widow">Widow</option>
+                            <option value="widower">Widower</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="aadthar_no">Aadhar Number:</label>
+                        <input type="tel" id="aadthar_no" name="aadthar_no" placeholder="0000111100001111" required>
+                    </div>
+
                     <div class="form-group">
                         <label for="mbc">Medical Board Certificate:</label>
                         <select id="mbc" name="mbc" required>
@@ -133,7 +111,34 @@
                             <option value="not-available">Not Available</option>
                         </select>
                     </div>
-    
+                </div>
+            </div>
+            
+            <!--Section C : Personal Information-->
+            <div class="containerHigh">
+                <h2>Personal Information</h2>
+                <div class="main-container">
+                    <div class="form-group">
+                        <label for="uid">UID card:</label>
+                        <select name="uid" id="uid" onchange="avilableOrNotAvailable()">
+                            <option value="available">Available</option>
+                            <option value="not available">Not Available</option>
+                        </select>
+                    </div>
+                    
+
+                    <div class="form-group">
+                        <label for="uid-number">Number:</label>
+                        <input type="number" id="uid-number" name="uid-number" required>
+
+                        <label for="uid-reason">Reason:</label>
+                        <input type="text" name="uid-reason" id="uid-reason">
+
+                        <select name="applied-or-not-informed" id="applied-or-not-informed">
+                            <option value="applied">Applied</option>
+                            <option value="not informed">Not informed</option>
+                        </select>
+                    </div>
                     <div class="form-group">
                         <label for="dis-type">Type of Disability:</label>
                         <select id="Type-of-Disability" name="Type-of-Disability" required>
@@ -170,7 +175,17 @@
                             <option value="80-above">80 and Above</option>
                         </select>
                     </div>
-    
+                    <div class="form-group">
+                        <label for="level-of-disability">Level of Disability</label>
+                        <select name="level-of-disability" id="level-of-disability">
+                            <option value="Mild">Mild</option>
+                            <option value="Moderate">Moderate</option>
+                            <option value="Severe">Severe</option>
+                            <option value="Profound">Profound</option>
+                            <option value="Not Applicable">Not Applicable</option>
+                        </select>
+                    </div>
+
                     <div class="form-group">
                         <label for="gship">Guardianship:</label>
                         <select id="gship" name="gship" required>
@@ -275,9 +290,7 @@
                                     <option value="relatives">Relatives</option>
                                 </select>
                             </div>
-                        </div>
-                
-                        
+                        </div> 
                     </div>
                     <div class="form-group">
                         <div class="question">

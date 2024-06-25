@@ -116,6 +116,24 @@ label[for=if-you-dont-visit-places-why]{
 }
 
 
+#uid-reason{
+    display: none;
+}
+label[for='uid-reason']{
+    display: none;
+}
+
+
+#applied-or-not-informed{
+    display: none;
+}
+label[for='applied-or-not-informed']{
+    display: none;
+}
+
+
+
+
 @media (max-width: 768px) {
     .main-container {
         grid-template-columns: repeat(1, 1fr);
@@ -129,6 +147,9 @@ label[for=if-you-dont-visit-places-why]{
     }
     h2{
         max-width: 400px;
+    }
+    .long-group{
+        grid-area: auto;
     }
     
 }

@@ -81,6 +81,41 @@ function YesAndNo()
             element3A.style.display = 'none';
             element3B.style.display = 'none';
         }
+}
 
+function avilableOrNotAvailable()
+{
+    const element1 = document.getElementById('uid');
 
+    const element2A = document.querySelector('label[for="uid-number"]');
+    const element2B = document.getElementById('uid-number');
+
+    const element3A = document.querySelector('label[for="uid-reason"]');
+    const element3B = document.getElementById('uid-reason');
+
+    const element4A = document.querySelector('label[for="applied-or-not-informed"]');
+    const element4B = document.getElementById('applied-or-not-informed');
+
+    if(element1.value == 'not available')
+        {
+            element2A.style.display = 'none';
+            element2B.style.display = 'none';
+            
+            element3A.style.display = 'block';
+            element3B.style.display = 'block';
+
+            //element4A.style.display = 'block';
+            element4B.style.display = 'block';
+        }
+    else
+        {
+            element2A.style.display = 'block';
+            element2B.style.display = 'block';
+            
+            element3A.style.display = 'none';
+            element3B.style.display = 'none';
+
+            //element4A.style.display = 'none';
+            element4B.style.display = 'none';
+        }
 }
