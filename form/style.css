@@ -68,12 +68,16 @@ h2
 .form-group {
     width: 350px;
     padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end
 }
 
 label {
     display: block;
     font-weight: bold;
     margin-bottom: 5px;
+    padding-top: 10px;
 }
 
 input, select {
@@ -98,6 +102,17 @@ textarea:focus {
 .dropdown {
     display: none;
     margin-top: 10px;
+    padding: 10px;
+    margin:10px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+#if-you-dont-visit-places-why{
+    display: none;
+}
+label[for=if-you-dont-visit-places-why]{
+    display: none;
 }
 
 
