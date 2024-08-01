@@ -1,807 +1,1405 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <main>
-        <h1>Personal Details PWD</h1>
-        <form method="post">
-            <!--Section A : Personal Information-->
-            <div class="containerHigh">
-                <h2>Personal Information</h2>
-                <div class="main-container">
-                    <div class="form-group">
-                        <label for="Name">Name:</label>
-                        <input type="text" id="Name" name="Name" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="Age">Age:</label>
-                        <input type="number" id="Age" name="Age" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="Address">Address:</label>
-                        <textarea id="Address" name="Address" rows="1" required></textarea>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="Phone_no">Phone No:</label>
-                        <input type="tel" id="Phone_no" name="Phone_no" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="Ward">Ward No:</label>
-                        <input type="text" id="Ward" name="Ward" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="House">House No:</label>
-                        <input type="text" id="House" name="House" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="Gender">Gender:</label>
-                        <select id="Gender" name="Gender" required>
-                            <option value="male">Male</option>
-                            <option value="female">Female</option>
-                            <option value="trans">Trans</option>
-                        </select>
-                    </div>
-                </div>
-            </div>
-            
-            <!--Section B : Personal Information-->
-            <div class="containerHigh">
-                <h2>Personal Information</h2>
-                <div class="main-container">
-                    <div class="form-group">
-                        <label for="care-taker-name">Caretaker's Name:</label>
-                        <input type="text" id="care-taker-name" name="care-taker-name" required>
-                    </div>
-    
-                    <div class="form-group">
-                        <label for="CPhone_no">Caretaker's Phone No:</label>
-                        <input type="tel" id="CPhone_no" name="CPhone_no" required>
-                    </div>
-    
-                    <div class="form-group">
-                        <label for="Guardian">Guardian's Name:</label>
-                        <input type="text" id="Guardian" name="Guardian" required>
-                    </div>
-    
-                    <div class="form-group">
-                        <label for="fam-memb">No. of Family Members:</label>
-                        <input type="number" id="fam-memb" name="fam-memb" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="Parental_Status">Parental Status:</label>
-                        <select id="Parental_Status" name="Parental_Status" required>
-                            <option value="father-mother-alive">Father and Mother Alive</option>
-                            <option value="mother-alone">Mother Alone</option>
-                            <option value="father-alone">Father Alone</option>
-                            <option value="none-alive">None of Parents Alive</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="Martial_Status">Marital Status:</label>
-                        <select id="Martial_Status" name="Martial_Status" required>
-                            <option value="unmarried">Unmarried</option>
-                            <option value="married">Married</option>
-                            <option value="widow">Widow</option>
-                            <option value="widower">Widower</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="aadthar_no">Aadhar Number:</label>
-                        <input type="tel" id="aadthar_no" name="aadthar_no" placeholder="0000111100001111" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="mbc">Medical Board Certificate:</label>
-                        <select id="mbc" name="mbc" required>
-                            <option value="available">Available</option>
-                            <option value="not-available">Not Available</option>
-                        </select>
-                    </div>
-                </div>
-            </div>
-            
-            <!--Section C : Personal Information-->
-            <div class="containerHigh">
-                <h2>Personal Information</h2>
-                <div class="main-container">
-                    <div class="form-group">
-                        <label for="uid">UID card:</label>
-                        <select name="uid" id="uid" onchange="avilableOrNotAvailable()">
-                            <option value="available">Available</option>
-                            <option value="not available">Not Available</option>
-                        </select>
-                    </div>
-                    
-
-                    <div class="form-group">
-                        <label for="uid-number">Number:</label>
-                        <input type="number" id="uid-number" name="uid-number" required>
-
-                        <label for="uid-reason">Reason:</label>
-                        <input type="text" name="uid-reason" id="uid-reason">
-
-                        <select name="applied-or-not-informed" id="applied-or-not-informed">
-                            <option value="applied">Applied</option>
-                            <option value="not informed">Not informed</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="dis-type">Type of Disability:</label>
-                        <select id="Type-of-Disability" name="Type-of-Disability" required>
-                            <option value="blind">Blind</option>
-                            <option value="low-vision">Low Vision</option>
-                            <option value="leprosy-cured">Leprosy Cured</option>
-                            <option value="loco-moto">Loco Moto</option>
-                            <option value="dwarfisms">Dwarfisms</option>
-                            <option value="id">ID</option>
-                            <option value="mi">MI</option>
-                            <option value="cp">CP</option>
-                            <option value="autissum">Autissum</option>
-                            <option value="sld">SLD</option>
-                            <option value="speech-disorder">Speech Disorder</option>
-                            <option value="hearing-impaired">Hearing Impaired</option>
-                            <option value="musDystrophy">mus.Dystrophy</option>
-                            <option value="hemoscelia">Hemoscelia</option>
-                            <option value="available">AVV</option>
-                            <option value="thalassemia">Thalassemia</option>
-                            <option value="parkinson-disease">Parkinson Disease</option>
-                            <option value="multiple-sclerosis">Multiple Sclerosis</option>
-                            <option value="cycle-cell-anemia">Cycle Cell Anemia</option>
-                            <option value="Nuroligical-Condition">Nuroligical Condition</option>
-                            <option value="Multiple-Disability">Multiple Disability</option>
-                        </select>
-                    </div>
-    
-                    <div class="form-group">
-                        <label for="percentage">Percentage of Disability:</label>
-                        <select id="percentage" name="percentage">
-                            <option value="below-40">Below 40</option>
-                            <option value="40-50">40-50</option>
-                            <option value="50-80">50-80</option>
-                            <option value="80-above">80 and Above</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="level-of-disability">Level of Disability</label>
-                        <select name="level-of-disability" id="level-of-disability">
-                            <option value="Mild">Mild</option>
-                            <option value="Moderate">Moderate</option>
-                            <option value="Severe">Severe</option>
-                            <option value="Profound">Profound</option>
-                            <option value="Not Applicable">Not Applicable</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="gship">Guardianship:</label>
-                        <select id="gship" name="gship" required>
-                            <option value="recieved">Recieved</option>
-                            <option value="not-recieved">Not Recieved</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="ceritificate-file">Upload Certificate</label>
-                        <input type="file" name="ceritificate-file" id="ceritificate-file">
-                    </div>
-                    <div class="form-group">
-                        <label for="adl-support">Continuous support for ADL needed?</label>
-                        <select name="adl-support" id="adl-support">
-                            <option value="yes">Yes</option>
-                            <option value="no">No</option>
-                        </select>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="containerHigh">
-                <h2>Abuses faced</h2>
-                <div class="main-container">
-                    <div class="form-group">
-                        <label for="physical-valence">Physical Valence</label>
-                        <select name="physical-valence" id="physical-valence" onchange="disableElementIfConditionAbuse()">
-                            <option value="yes">Yes</option>
-                            <option value="no">No</option>
-                            <option value="not-interest">Not interested to disclose</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="source-abuse">Source of Abuse</label>
-                        <select name="source-abuse" id="source-abuse">
-                            <option value="family">Family</option>
-                            <option value="neighborhood">Neighborhood</option>
-                            <option value="public-Space">public Space</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="mental-abuse">Mental Abuse</label>
-                        <select name="mental-abuse" id="mental-abuse" onchange="disableElementIfConditionMentalAbuse()">
-                            <option value="yes">Yes</option>
-                            <option value="no">No</option>
-                            <option value="not-interest">Not interested to disclose</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="source-abuse-mental">Source of Mental Abuse</label>
-                        <select name="source-abuse-mental" id="source-abuse-mental">
-                            <option value="family">Family</option>
-                            <option value="neighborhood">Neighborhood</option>
-                            <option value="public-Space">public Space</option>
-                        </select>
-                    </div>
-                </div>
+  <div class="row container-fluid">
+    <header class="wrapper">
+      <h5 class="mt-2">Personal Information</h5>
+    </header>
+    <main class="">
+      <!-- <h1>Personal Details PWD</h1> -->
+      <form
+        action=""
+        method="post"
+        enctype="multipart/form-data"
+        class="personal-info-form"
+      >
+        <input type="file" name="image" hidden />
+        <input type="text" name="user_id" value="<%=user._id%>" hidden />
+        <div class="update-button mt-2 mx-auto text-end">
+          <input
+            class="btn btn-primary btn-sm"
+            role="button"
+            type="submit"
+            value="Update Personal Information"
+          />
+        </div>
+        <!--Section A : Personal Information-->
+        <div class="containerHigh">
+          <h2>Personal Information</h2>
+          <div class="main-container">
+            <!-- <input type="file" name="image" hidden /> -->
+            <!-- <input type="text" name="user_id" value="<%=user._id%>" hidden /> -->
+            <div class="form-group">
+              <label for="Name">Name:</label>
+              <input type="text" id="Name" name="name" value="<%=user.name%>" />
             </div>
 
-            <!--Section II : Social Status of Differentially Abled-->
-            <div class="containerHigh">
-                <h2>Social Status of Differentially Abled</h2>
-                <div class="main-container">
-                    <div class="form-group">
-                        <label for="category">Category</label>
-                        <select name="category" id="category">
-                            <option value="general">General</option>
-                            <option value="obc">OBC</option>
-                            <option value="oec">OEC</option>
-                            <option value="sc">SC</option>
-                            <option value="st">ST</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="classification">Classification</label>
-                        <select name="classification" id="classification">
-                            <option value="apl">APL</option>
-                            <option value="bpl">BPL</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="religion">Religion</label>
-                        <select name="religion" id="religion">
-                            <option value="hindu">Hindu</option>
-                            <option value="muslim">Muslim</option>
-                            <option value="christian">Christian</option>
-                            <option value="other">Other</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <div class="question">
-                            <label for="have-social-protection">Social Protection</label>
-                            <select id="have-social-protection" name="question">
-                                <option value="no">No</option>
-                                <option value="yes">Yes</option>
-                            </select>
-                            <div class="dropdown">
-                                <select id="social-protection">
-                                    <option value="family">Family</option>
-                                    <option value="neighborhood">Neighborhood</option>
-                                    <option value="friends">Friends</option>
-                                    <option value="relatives">Relatives</option>
-                                </select>
-                            </div>
-                        </div> 
-                    </div>
-                    <div class="form-group">
-                        <div class="question">
-                            <label for="have-participation">Participation</label>
-                            <select id="have-participation" name="question">
-                                <option value="no">No</option>
-                                <option value="yes">Yes</option>
-                            </select>
-                            <div class="dropdown">
-                                <select id="participation">
-                                    <option value="nhg">NHG</option>
-                                    <option value="special-grama-sabha">Special Grama Sabha</option>
-                                    <option value="grama-sabha">Grama Sabha</option>
-                                    <option value="organisation">Organisation</option>
-                                    <option value="library">Library</option>
-                                    <option value="labour-card">Labour Card</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="participation-in-family-decition">Participation in Family Decision</label>
-                        <select name="participation-in-family-decition" id="participation-in-family-decition">
-                            <option value="yes">Yes</option>
-                            <option value="no">No</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="freedom-for-personnel-decision">Freedom for personnel decision</label>
-                        <select name="freedom-for-personnel-decision" id="freedom-for-personnel-decision">
-                            <option value="yes">Yes</option>
-                            <option value="no">No</option>
-                        </select>
-                    </div>
-                </div>
-            </div>
-            
-            <!--Section III : Echonomic Status-->
-            <div class="containerHigh">
-                <h2>Economic Status</h2>
-                <div class="main-container">
-                    <div class="form-group">
-                        <div class="question">
-                            <label for="have-owners-hip-of-assets">Owners hip of assets</label>
-                            <select id="have-owners-hip-of-assets" name="question">
-                                <option value="no">No</option>
-                                <option value="yes">Yes</option>
-                            </select>
-                            <div class="dropdown">
-                                <select id="owners-hip-of-assets">
-                                    <option value="land">Land</option>
-                                    <option value="house">House</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="status-of-accommodation">Status of Accommodation</label>
-                        <select name="status-of-accommodation" id="status-of-accommodation">
-                            <option value="rented">Rented</option>
-                            <option value="other">Other</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="type-of-house">Type of House</label>
-                        <select name="type-of-house" id="type-of-house">
-                            <option value="thatched">Thatched</option>
-                            <option value="sheet">Sheet</option>
-                            <option value="concrete">Concrete</option>
-                            <option value="tiled">Tiled</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="employment">Employment</label>
-                        <select name="employment" id="employment">
-                            <option value="government">Government</option>
-                            <option value="private">Private</option>
-                            <option value="self-employed">Self Employed</option>
-                            <option value="nill">Nill</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="whether-vocational-assessment-conducted">Vocational Assessment Conducted?</label>
-                        <select name="whether-vocational-assessment-conducted" id="whether-vocational-assessment-conducted">
-                            <option value="yes">Yes</option>
-                            <option value="no">No</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="employment-skill">Employment Skill</label>
-                        <select name="employment-skill" id="employment-skill">
-                            <option value="computer">Computer</option>
-                            <option value="clerical">Clerical</option>
-                            <option value="accounting">Accounting</option>
-                            <option value="teaching">Teaching</option>
-                            <option value="marketing">Marketing</option>
-                            <option value="agriculture">Agriculture</option>
-                            <option value="animal-husbandry">Animal Husbandry</option>
-                            <option value="food-processing">Food processing</option>
-                            <option value="poultry">Poultry</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="training-needs">Training needs</label>
-                        <select name="training-needs" id="training-needs">
-                            <option value="computer">Computer</option>
-                            <option value="clerical">Clerical</option>
-                            <option value="accounting">Accounting</option>
-                            <option value="teaching">Teaching</option>
-                            <option value="marketing">Marketing</option>
-                            <option value="agriculture">Agriculture</option>
-                            <option value="animal-husbandry">Animal Husbandry</option>
-                            <option value="food-processing">Food processing</option>
-                            <option value="poultry">Poultry</option>
-                            <option value="open-school">Open School</option>
-                            <option value="iti">ITI</option>
-                            <option value="competitive-exam">Competitive Exam</option>
-                            <option value="scholarship">Scholarship</option>
-                            <option value="public-exam">Public Exam</option>
-                            <option value="communication">Communication</option>
-                            <option value="personality-development">Personality Development</option>
-                            <option value="artistic-talent">Artistic Talent</option>
-                            <option value="sports-training">Sports Training</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="financial-need">Financial Need</label>
-                        <select name="financial-need" id="financial-need">
-                            <option value="self-employment">Self Employment</option>
-                            <option value="bank-loan">Bank load</option>
-                            <option value="entrepreneurial-assistance">Entrepreneurial assistance</option>
-                            <option value="mnregs-employment">MNREGS Employment</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="personal-income">Personal Income</label>
-                        <input type="number" name="personal-income" id="personal-income" placeholder="₹ 0.00">
-                    </div>
-                    <div class="form-group">
-                        <label for="annual-income">Annual Income</label>
-                        <input type="number" name="annual-income" id="annual-income" placeholder="₹ 0.00">
-                    </div>            
-                </div>
+            <div class="form-group">
+              <label for="age">Age:</label>
+              <input
+                type="text"
+                id="age"
+                value="<%=user.details. personal_info_1.age%>"
+                name="age"
+              />
             </div>
 
-            <!--Section IV : Education Status-->
-            <div class="containerHigh">
-                <h2>Education Status</h2>
-                <div class="main-container">
-                    <div class="form-group">
-                        <label for="educational-level">Educational level</label>
-                        <select name="educational-level" id="educational-level">
-                            <option value="special-ed">Special ED</option>
-                            <option value="lp">LP</option>
-                            <option value="up">UP</option>
-                            <option value="hs">HS</option>
-                            <option value="+2">+2</option>
-                            <option value="pg">PG</option>
-                            <option value="technical">Technical</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="strain-associaled-during-education">Strain associaled during education</label>
-                        <select name="strain-associaled-during-education" id="strain-associaled-during-education">
-                            <option value="communication">Communication</option>
-                            <option value="transportation">Transportation</option>
-                            <option value="financial">Financial</option>
-                            <option value="unfriendly-school">Unfriendly School</option>
-                            <option value="sensory-deficiency">Sensory deficiency</option>
-                            <option value="lack-of-special-teachers">Lack of special teachers</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="category-of-educational-institution">Category of educational institution</label>
-                        <select name="category-of-educational-institution" id="category-of-educational-institution">
-                            <option value="general-school">General School</option>
-                            <option value="special-school">Special School</option>
-                            <option value="open-school">Open School</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <div class="question">
-                            <label for="whether-vocational-training-received">Whether vocational training received</label>
-                            <select id="whether-vocational-training-received" name="question">
-                                <option value="no">No</option>
-                                <option value="yes">Yes</option>
-                            </select>
-                            <div class="dropdown">
-                                <label for="vocational-training-source">Source:</label>
-                                <select id="vocational-training-source">
-                                    <option value="kud">Kud</option>
-                                    <option value="NYC">NYC</option>
-                                    <option value="KASE">KASE</option>
-                                    <option value="">Youth Welfare</option>
-                                    <option value="SJD">SJD</option>
-                                    <option value="HWC/NGOs">HWC/NGOs</option>
-                                    <option value="LSDs">LSGs</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="form-group">
+              <label for="address">Address:</label>
+              <textarea id="address" name="address" rows="3"><%=user.details.personal_info_1.address%></textarea
+              >
             </div>
 
-            <!--Section V : Health Status-->
-            <div class="containerHigh">
-                <h2>Health Status</h2>
-                <div class="main-container">
-                    <div class="form-group">
-                        <div class="question">
-                            <label for="member-of-gov-inst">Are you a member of Government insu</label>
-                            <select id="member-of-gov-inst" name="question">
-                                <option value="no">No</option>
-                                <option value="yes">Yes</option>
-                            </select>
-                            <div class="dropdown">
-                                <label for="gov-inst">Govt Insu:</label>
-                                <select id="gov-inst">
-                                    <option value="RSBY">RSBY</option>
-                                    <option value="Aswaskiranam">Aswaskiranam</option>
-                                    <option value="Nirmaya">Nirmaya</option>
-                                    <option value="PMJAY">PMJAY</option>
-                                </select>
-                                <label for="gov-insu-mark">Mark:</label>
-                                <input type="number" name="gov-insu-mark" id="gov-insu-mark">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="received-assistance-from-cmdrf/kssm">Received assistance from CMDRF/KSSM</label>
-                        <select name="received-assistance-from-cmdrf" id="received-assistance-from-cmdrf">
-                            <option value="yes">Yes</option>
-                            <option value="no">No</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="taken-compulsory-immunisation">Have you taken compulsory immunisation</label>
-                        <select name="taken-compulsory-immunisation" id="taken-compulsory-immunisation">
-                            <option value="yes">Yes</option>
-                            <option value="no">No</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="type-of-health-method">Type of health method you mainly adopt</label>
-                        <select name="type-of-health-method" id="type-of-health-method">
-                            <option value="Alopathy">Alopathy</option>
-                            <option value="Homoeo">Homoeo</option>
-                            <option value="Unani">Unani</option>
-                            <option value="Ayurveda">Ayurveda</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <div class="question">
-                            <label for="regularly-dependence-on-medicine">Do you regularly depend on medicine</label>
-                            <select id="regularly-dependence-on-medicine" name="question">
-                                <option value="no">No</option>
-                                <option value="yes">Yes</option>
-                            </select>
-                            <div class="dropdown">
-                                <label for="type-of-medicine">Type:</label>
-                                <textarea name="type-of-medicine" id="type-of-medicine"></textarea>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="recurring-ailments">Recurring Ailments if any Mention</label>
-                        <input type="text" name="recurring-ailments" id="recurring-ailments">
-                    </div>
-                </div>
+            <div class="form-group">
+              <label for="Phone_no">Phone No:</label>
+              <input
+                type="tel"
+                id="Phone_no"
+                value="<%=user.details.personal_info_1.phone_no%>"
+                name="phone_no"
+              />
             </div>
 
-            <div class="containerHigh">
-                <h2>Health Status</h2>
-                <div class="main-container">
-                    <div class="form-group">
-                        <label for="children-nutritional-status">In case of children, nutritional Status</label>
-                        <select name="children-nutritional-status" id="children-nutritional-status">
-                            <option value="Mild">Mild</option>
-                            <option value="Moderate">Moderate</option>
-                            <option value="Severe">Severe</option>
-                            <option value="Profound">Profound</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="development-delay">Any development Delay identified</label>
-                        <select name="development-delay" id="development-delay">
-                            <option value="yes">Yes</option>
-                            <option value="no">No</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="problem-under-intellectual-capacity">Do you experience any problem under intellectual capacity</label>
-                        <select name="problem-under-intellectual-capacity" id="problem-under-intellectual-capacity">
-                            <option value="Logical Thinking">Logical Thinking</option>
-                            <option value="Planing">Planing</option>
-                            <option value="Organisation">Organisation</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="locomotor-problem">Do you have any locomotor problem</label>
-                        <select name="locomotor-problem" id="locomotor-problem">
-                            <option value="Bedridden">Bedridden</option>
-                            <option value="Wheel Chair">Wheel Chair</option>
-                            <option value="Recurrent care">Recurrent care</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="comorbidity">Comorbidity</label>
-                        <select name="comorbidity" id="comorbidity">
-                            <option value="Epilepsy">Epilepsy</option>
-                            <option value="Mental issue">Mental issue</option>
-                            <option value="Anxiety">Anxiety</option>
-                        </select>
-                    </div>
-                </div>
+            <div class="form-group">
+              <label for="Ward">Ward No:</label>
+              <input
+                type="text"
+                id="Ward"
+                name="ward_no"
+                value="<%=user.details.personal_info_1.ward_no%>"
+              />
             </div>
 
-            <!--Section VI : Rehabilation Needs-->
-            <div class="containerHigh">
-                <h2>Rehabilation Needs</h2>
-                <div class="main-container">
-                    <div class="form-group">
-                        <label for="assistance-required-to-overcome-the-problem">The assistance required to overcome the problem</label>
-                        <select name="assistance-required-to-overcome-the-problem" id="assistance-required-to-overcome-the-problem">
-                            <option value="Education">Education</option>
-                            <option value="Vocational Training">Vocational Training</option>
-                            <option value="Training">Training</option>
-                            <option value="Employment">Employment</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <div class="question">
-                            <label for="skill-acquired-in-arts-or-sports-if-any">The skill acquired in arts or sports if any</label>
-                            <select id="skill-acquired-in-arts-or-sports-if-any" name="question">
-                                <option value="no">No</option>
-                                <option value="yes">Yes</option>
-                            </select>
-                            <div class="dropdown">
-                                <label for="skill-area">Skill Area:</label>
-                                <select id="skill-area">
-                                    <option value="Arts">Arts</option>
-                                    <option value="Sports">Sports</option>
-                                    <option value="Handicrafts">Handicrafts</option>
-                                </select>
-                                <label for="if-talented-why-not-trained">If talented Why not trained:</label>
-                                <select name="if-talented-why-not-trained" id="if-talented-why-not-trained">
-                                    <option value="Lack of opportunity">Lack of opportunity</option>
-                                    <option value="Financial Constraints">Financial Constraints</option>
-                                    <option value="Lack of support">Lack of support</option>
-                                    <option value="Loco moto deficiency">Loco moto deficiency</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="professional-course-completed">Professional Course completed</label>
-                        <select name="professional-course-completed" id="professional-course-completed">
-                            <option value="Teaching">Teaching</option>
-                            <option value="Social Work">Social Work</option>
-                            <option value="Law">Law</option>
-                            <option value="Other">Other</option>
-                            <option value="Nill">Nill</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="completed-vocational-area">Completed vocational area</label>
-                        <select name="completed-vocational-area" id="completed-vocational-area">
-                            <option value="Handicrafts">Handicrafts</option>
-                            <option value="Fashion Designing">Fashion Designing</option>
-                            <option value="Farming">Farming</option>
-                            <option value="Other">Other</option>
-                            <option value="Nill">Nill</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="non-availability-of-rehabilitation-on-support">Non availability of rehabilitation on support</label>
-                        <select name="non-availability-of-rehabilitation-on-support" id="non-availability-of-rehabilitation-on-support">
-                            <option value="Physio therapy">Physio therapy</option>
-                            <option value="Speech therapy">Speech therapy</option>
-                            <option value="Developmental therapy">Developmental therapy</option>
-                            <option value="Remedial therapy">Remedial therapy</option>
-                            <option value="Community Home">Community Home</option>
-                            <option value="Convenient VTC">Convenient VTC</option>
-                            <option value="Special NHG">Special NHG</option>
-                            <option value="Cottage work training">Cottage work training</option>
-                            <option value="Day care facility">Day care facility</option>
-                            <option value="Craft work for bedridden">Craft work for bedridden</option>
-                            <option value="Palliative nursing">Palliative nursing</option>
-                        </select>
-                    </div>
-                </div>
+            <div class="form-group">
+              <label for="House">House No:</label>
+              <input
+                type="text"
+                id="House"
+                name="house_no"
+                value="<%=user.details.personal_info_1.house_no%>"
+              />
             </div>
 
-            <!--Section VII : Barriers felt at home-->
-            <div class="containerHigh">
-                <h2>Barriers felt at home</h2>
-                <div class="main-container">
-                    <div class="form-group">
-                        <label for="barrier-free-physical-facilities-at-home">Barrier free physical facilities at home</label>
-                        <select name="barrier-free-physical-facilities-at-home" id="barrier-free-physical-facilities-at-home">
-                            <option value="yes">Yes</option>
-                            <option value="no">No</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="if-not-bfe-the-deficiency">If not BFE the deficiency</label>
-                        <select name="if-not-bfe-the-deficiency" id="if-not-bfe-the-deficiency">
-                            <option value="No Handrail">No Handrail</option>
-                            <option value="No Ramps">No Ramps</option>
-                            <option value="Doorstep Barriers">Doorstep Barriers</option>
-                            <option value="Lack of mobility equipments">Lack of mobility equipments</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="availability-of-disabled-friendly-toilets">Availability of disabled friendly toilets</label>
-                        <select name="availability-of-disabled-friendly-toilets" id="availability-of-disabled-friendly-toilets">
-                            <option value="Available">Available</option>
-                            <option value="Not Available">Not Available</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="whether-family-permit-to-travel-outside">Whether family permit to travel outside</label>
-                        <select name="whether-family-permit-to-travel-outside" id="whether-family-permit-to-travel-outside">
-                            <option value="yes">Yes</option>
-                            <option value="no">No</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="do-you-participate-decision-making-at-home">Do you participate decision making at home</label>
-                        <select name="do-you-participate-decision-making-at-home" id="do-you-participate-decision-making-at-home" onchange="ifNotReason()">
-                            <option value="no">No</option>
-                            <option value="yes">Yes</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="if-not-decision-making-at-home-why">If not, Why</label>
-                        <select name="if-not-decision-making-at-home-why" id="if-not-decision-making-at-home-why">
-                            <option value="Opinion not asked">Opinion not asked</option>
-                            <option value="Opinion not considered">Opinion not considered</option>
-                            <option value="Opinion not expressed">Opinion not expressed</option>
-                        </select>
-                    </div>
-                    
-                </div>
+            <div class="form-group">
+              <label for="Gender">Gender:</label>
+              <select id="Gender" name="gender">
+                <option value="<%=user.details.personal_info_1.gender%>">
+                  Selected : <%=user.details.personal_info_1.gender%>
+                </option>
+
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Trans">Trans</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!--Section B : Personal Information-->
+        <div class="containerHigh">
+          <h2>Personal Information</h2>
+          <div class="main-container">
+            <div class="form-group">
+              <label for="care-taker-name">Caretaker's Name:</label>
+              <input
+                type="text"
+                id="care-taker-name"
+                name="caretaker_name"
+                value="<%=user.details.personal_info_2.caretaker_name%>"
+              />
             </div>
 
-            <!--Section VII : Barriers felt at Public Space-->
-            <div class="containerHigh">
-                <h2>Barriers felt at Public Space</h2>
-                <div class="main-container">
-                    <div class="form-group">
-                        <label for="do-you-go-outside-for-personnel-purpose">Do you go outside for personnel purpose</label>
-                        <select name="do-you-go-outside-for-personnel-purpose" id="do-you-go-outside-for-personnel-purpose" onchange="YesAndNo()">
-                            <option value="yes">Yes</option>
-                            <option value="no">No</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="if-yes-where-do-you-visit">If Yes, Where do you visit</label>
-                        <select name="if-yes-where-do-you-visit" id="if-yes-where-do-you-visit">
-                            <option value="Shop">Shop</option>
-                            <option value="Hospital">Hospital</option>
-                            <option value="Entertainment">Entertainment</option>
-                            <option value="Other purpose">Other purpose</option>
-                        </select>
-                        <label for="if-you-dont-visit-places-why">If you don't visit places, Why?</label>
-                        <select name="if-you-dont-visit-places-why" id="if-you-dont-visit-places-why">
-                            <option value="Lack of helpers">Lack of helpers</option>
-                            <option value="Lack of vehicle">Lack of vehicle</option>
-                            <option value="Discrimination">Discrimination</option>
-                            <option value="Loco Moto deficiency">Loco Moto deficiency</option>
-                            <option value="Lack of interest">Lack of interest</option>
-                            <option value="Lack of public transport">Lack of public transport</option>
-                            <option value="Lack of permission">Lack of permission</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="is-your-workplace-differently-abled-friendly">Is your workplace differently abled friendly</label>
-                        <select name="is-your-workplace-differently-abled-friendly" id="is-your-workplace-differently-abled-friendly">
-                            <option value="yes">Yes</option>
-                            <option value="no">No</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="whether-the-private-institutions-are-differently-abled">Whether the private institutions are differently abled</label>
-                        <select name="whether-the-private-institutions-are-differently-abled" id="whether-the-private-institutions-are-differently-abled">
-                            <option value="yes">Yes</option>
-                            <option value="no">No</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="can-you-give-the-names-of-places-not-differently-adled-friendly">Can you give the names of places not differently adled friendly</label>
-                        <select name="can-you-give-the-names-of-places-not-differently-adled-friendly" id="can-you-give-the-names-of-places-not-differently-adled-friendly">
-                            <option value="Home">Home</option>
-                            <option value="School">School</option>
-                            <option value="Panchayath">Panchayath</option>
-                            <option value="PHC">PHC</option>
-                            <option value="Bus Stop">Bus Stop</option>
-                            <option value="Markets">Markets</option>
-                            <option value="Religious place">Religious place</option>
-                            <option value="Bus">Bus</option>
-                            <option value="Other">Other</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="which-are-the-places-that-to-be-converted-friendly-immediately">Which are the places that to be converted friendly, immediately</label>
-                        <input type="text" name="which-are-the-places-that-to-be-converted-friendly-immediately" id="which-are-the-places-that-to-be-converted-friendly-immediately">
-                    </div>
-                </div>
+            <div class="form-group">
+              <label for="CPhone_no">Caretaker's Phone No:</label>
+              <input
+                type="tel"
+                value="<%=user.details.personal_info_2.caretaker_phone_no%>"
+                id="CPhone_no"
+                name="caretaker_phone_no"
+              />
             </div>
-        </form>
+
+            <div class="form-group">
+              <label for="Guardian">Guardian's Name:</label>
+              <input
+                type="text"
+                value="<%=user.details.personal_info_2.guardian_name%>"
+                id="Guardian"
+                name="guardian_name"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="fam-memb">No. of Family Members:</label>
+              <input
+                value="<%=user.details.personal_info_2.no_of_family_members%>"
+                type="text"
+                id="fam-memb"
+                name="no_of_family_members"
+              />
+            </div>
+            <div class="form-group">
+              <label for="Parental_Status">Parental Status:</label>
+              <select id="Parental_Status" name="parental_status">
+                <option
+                  value="<%=user.details.personal_info_2.parental_status%>"
+                >
+                  Selected : <%=user.details.personal_info_2.parental_status%>
+                </option>
+                <option value="Father and Mother Alive">
+                  Father and Mother Alive
+                </option>
+                <option value="Mother Alone">Mother Alone</option>
+                <option value="Father Alone">Father Alone</option>
+                <option value="None of Parents Alive">
+                  None of Parents Alive
+                </option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="Martial_Status">Marital Status:</label>
+              <select id="Martial_Status" name="martial_status">
+                <option
+                  value="<%=user.details.personal_info_2.martial_status%>"
+                >
+                  Selected : <%=user.details.personal_info_2.martial_status%>
+                </option>
+                <option value="Unmarried">Unmarried</option>
+                <option value="Married">Married</option>
+                <option value="Widow">Widow</option>
+                <option value="Widower">Widower</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="aadthar_no">Aadhar Number:</label>
+              <input
+                type="tel"
+                id="aadthar_no"
+                name="aadhar_no"
+                placeholder="0000111100001111"
+                value="<%=user.details.personal_info_2.aadhar_no%>"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="mbc">Medical Board Certificate:</label>
+              <select id="mbc" name="medical_board_certificate">
+                <option
+                  value="<%=user.details.personal_info_2.medical_board_certificate%>"
+                >
+                  Selected :
+                  <%=user.details.personal_info_2.medical_board_certificate%>
+                </option>
+                <option value="Available">Available</option>
+                <option value="Not Available">Not Available</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!--Section C : Personal Information-->
+        <div class="containerHigh">
+          <h2>Personal Information</h2>
+          <div class="main-container">
+            <div class="form-group">
+              <label for="uid">UID card:</label>
+              <select name="uid" id="uid" onchange="avilableOrNotAvailable()">
+                <option value="available">Available</option>
+                <option value="not available">Not Available</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="uid-number">Number:</label>
+              <input type="number" id="uid-number" name="uid-number" />
+
+              <label for="uid-reason">Reason:</label>
+              <input type="text" name="uid-reason" id="uid-reason" />
+
+              <select
+                name="applied-or-not-informed"
+                id="applied-or-not-informed"
+              >
+                <option value="applied">Applied</option>
+                <option value="not informed">Not informed</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="dis-type">Type of Disability:</label>
+              <select id="Type-of-Disability" name="type_of_disablity">
+                <option
+                  value="<%=user.details.personal_info_3.type_of_disablity%>"
+                >
+                  Selected : <%=user.details.personal_info_3.type_of_disablity%>
+                </option>
+                <option value="Blind">Blind</option>
+                <option value="Low Vision">Low Vision</option>
+                <option value="Leprosy Cured">Leprosy Cured</option>
+                <option value="Loco Moto">Loco Moto</option>
+                <option value="Dwarfisms">Dwarfisms</option>
+                <option value="ID">ID</option>
+                <option value="MI">MI</option>
+                <option value="CP">CP</option>
+                <option value="Autissum">Autissum</option>
+                <option value="SLD">SLD</option>
+                <option value="Speech Disorder">Speech Disorder</option>
+                <option value="Hearing Impaired">Hearing Impaired</option>
+                <option value="Mus.Dystrophy">Mus.Dystrophy</option>
+                <option value=">Hemoscelia">Hemoscelia</option>
+                <option value="AAV">AAV</option>
+                <option value="Thalassemia">Thalassemia</option>
+                <option value="Parkinson Disease">Parkinson Disease</option>
+                <option value="Multiple Sclerosis">Multiple Sclerosis</option>
+                <option value="Cycle Cell Anemia">Cycle Cell Anemia</option>
+                <option value="Nuroligical Condition">
+                  Nuroligical Condition
+                </option>
+                <option value="Multiple Disability">Multiple Disability</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="percentage_of_disablity"
+                >Percentage of Disability:</label
+              >
+              <select id="percentage" name="percentage_of_disablity">
+                <option
+                  value="<%=user.details.personal_info_3.percentage_of_disablity%>"
+                >
+                  Selected :
+                  <%=user.details.personal_info_3.percentage_of_disablity%>
+                </option>
+                <option value="Below 40">Below 40</option>
+                <option value="40-50">40-50</option>
+                <option value="50-80">50-80</option>
+                <option value="80 and Above">80 and Above</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="level_of_disablity">Level of Disability</label>
+              <select name="level_of_disablity" id="level-of-disability">
+                <option
+                  value="<%=user.details.personal_info_3.level_of_disablity%>"
+                >
+                  Selected :
+                  <%=user.details.personal_info_3.level_of_disablity%>
+                </option>
+                <option value="Mild">Mild</option>
+                <option value="Moderate">Moderate</option>
+                <option value="Severe">Severe</option>
+                <option value="Profound">Profound</option>
+                <option value="Not Applicable">Not Applicable</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="guardianship">Guardianship:</label>
+              <select id="gship" name="guardianship">
+                <option value="<%=user.details.personal_info_3.guardianship%>">
+                  Selected : <%=user.details.personal_info_3.guardianship%>
+                </option>
+                <option value="Recieved">Recieved</option>
+                <option value="Not Recieved">Not Recieved</option>
+              </select>
+            </div>
+            <!-- <div class="form-group">
+              <label for="ceritificate-file">Upload Certificate</label>
+              <input
+                type="file"
+                name="ceritificate-file"
+                id="ceritificate-file"
+              />
+            </div> -->
+            <div class="form-group">
+              <label for="continuous_support_for_ADL_needed"
+                >Continuous support for ADL needed?</label
+              >
+              <select name="continuous_support_for_ADL_needed" id="adl-support">
+                <option
+                  value="<%=user.details.personal_info_3.continuous_support_for_ADL_needed%>"
+                >
+                  Selected :
+                  <%=user.details.personal_info_3.continuous_support_for_ADL_needed%>
+                </option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="containerHigh">
+          <h2>Abuses faced</h2>
+          <div class="main-container">
+            <div class="form-group">
+              <label for="physical-valence">Physical Valence</label>
+              <select
+                name="physical-valence"
+                id="physical-valence"
+                onchange="disableElementIfConditionAbuse()"
+              >
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+                <option value="not-interest">Not interested to disclose</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="source-abuse">Source of Abuse</label>
+              <select name="source-abuse" id="source-abuse">
+                <option value="family">Family</option>
+                <option value="neighborhood">Neighborhood</option>
+                <option value="public-Space">public Space</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="mental-abuse">Mental Abuse</label>
+              <select
+                name="mental-abuse"
+                id="mental-abuse"
+                onchange="disableElementIfConditionMentalAbuse()"
+              >
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+                <option value="not-interest">Not interested to disclose</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="source-abuse-mental">Source of Mental Abuse</label>
+              <select name="source-abuse-mental" id="source-abuse-mental">
+                <option value="family">Family</option>
+                <option value="neighborhood">Neighborhood</option>
+                <option value="public-Space">public Space</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!--Section II : Social Status of Differentially Abled-->
+        <div class="containerHigh">
+          <h2>Social Status of Differentially Abled</h2>
+          <div class="main-container">
+            <div class="form-group">
+              <label for="category">Category</label>
+              <select name="category" id="category">
+                <option
+                  value="<%=user.details.social_status_of_differentially_abled.category%>"
+                >
+                  Selected :
+                  <%=user.details.social_status_of_differentially_abled.category%>
+                </option>
+                <option value="General">General</option>
+                <option value="OBC">OBC</option>
+                <option value="OEC">OEC</option>
+                <option value="SC">SC</option>
+                <option value="ST">ST</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="classification">Classification</label>
+              <select name="classification" id="classification">
+                <option
+                  value="<%=user.details.social_status_of_differentially_abled.classification%>"
+                >
+                  Selected :
+                  <%=user.details.social_status_of_differentially_abled.classification%>
+                </option>
+                <option value="APL">APL</option>
+                <option value="BPL">BPL</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="religion">Religion</label>
+              <select name="religion" id="religion">
+                \
+                <option
+                  value="<%=user.details.social_status_of_differentially_abled.religion%>"
+                >
+                  Selected :
+                  <%=user.details.social_status_of_differentially_abled.religion%>
+                </option>
+                <option value="Hindu">Hindu</option>
+                <option value="Muslim">Muslim</option>
+                <option value="Christian">Christian</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <div class="question">
+                <label for="have-social-protection">Social Protection</label>
+                <select id="have-social-protection" name="social_protection_yes_or_no" class="question-select">
+                    <option value="no">No</option>
+                    <option value="yes">Yes</option>
+                </select>
+                <div class="dropdown" style="display: none;">
+                    <select id="social-protection" name="social_protection">
+                        <option value="family">Family</option>
+                        <option value="neighborhood">Neighborhood</option>
+                        <option value="friends">Friends</option>
+                        <option value="relatives">Relatives</option>
+                    </select>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="question">
+                <label for="have-participation">Participation</label>
+                <select id="have-participation" name="participation_yes_or_no" class="question-select">
+                  <option value="no">No</option>
+                  <option value="yes">Yes</option>
+                </select>
+                <div class="dropdown">
+                  <select id="participation" name="participation">
+                    <option value="nhg">NHG</option>
+                    <option value="special-grama-sabha">
+                      Special Grama Sabha
+                    </option>
+                    <option value="grama-sabha">Grama Sabha</option>
+                    <option value="organisation">Organisation</option>
+                    <option value="library">Library</option>
+                    <option value="labour-card">Labour Card</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="participation_in_family_decision"
+                >Participation in Family Decision</label
+              >
+              <select
+                name="participation_in_family_decision"
+                id="participation-in-family-decition"
+              >
+                <option
+                  value="<%=user.details.social_status_of_differentially_abled.participation_in_family_decision%>"
+                >
+                  Selected :
+                  <%=user.details.social_status_of_differentially_abled.participation_in_family_decision%>
+                </option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="freedom_for_personnel_decision"
+                >Freedom for personnel decision</label
+              >
+              <select
+                name="freedom_for_personnel_decision"
+                id="freedom-for-personnel-decision"
+              >
+                <option
+                  value="<%=user.details.social_status_of_differentially_abled.freedom_for_personnel_decision%>"
+                >
+                  Selected :
+                  <%=user.details.social_status_of_differentially_abled.freedom_for_personnel_decision%>
+                </option>
+
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!--Section III : Echonomic Status-->
+        <div class="containerHigh">
+          <h2>Economic Status</h2>
+          <div class="main-container">
+            <div class="form-group">
+              <div class="question">
+                <label for="have-owners-hip-of-assets"
+                  >Ownership of assets</label
+                >
+                <select id="ownership_of_assests_yes_or_no" name="ownership_of_assests_yes_or_no" class="question-select">
+                  <option value="no">No</option>
+                  <option value="yes">Yes</option>
+                </select>
+                <div class="dropdown">
+                  <select id="ownership_of_assests" name="ownership_of_assests">
+                    <option value="land">Land</option>
+                    <option value="house">House</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="status_of_accommodation"
+                >Status of Accommodation</label
+              >
+              <select
+                name="status_of_accommodation"
+                id="status-of-accommodation"
+              >
+                <option
+                  value="<%=user.details.economic_status.status_of_accommodation%>"
+                >
+                  Selected :
+                  <%=user.details.economic_status.status_of_accommodation%>
+                </option>
+                <option value="Rented">Rented</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="type_of_house">Type of House</label>
+              <select name="type_of_house" id="type-of-house">
+                <option value="<%=user.details.economic_status.type_of_house%>">
+                  Selected : <%=user.details.economic_status.type_of_house%>
+                </option>
+                <option value="Thatched">Thatched</option>
+                <option value="Sheet">Sheet</option>
+                <option value="Concrete">Concrete</option>
+                <option value="Tiled">Tiled</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="employment">Employment</label>
+              <select name="employment" id="employment">
+                <option value="<%=user.details.economic_status.employment%>">
+                  Selected : <%=user.details.economic_status.employment%>
+                </option>
+
+                <option value="Government">Government</option>
+                <option value="Private">Private</option>
+                <option value="Self Employed">Self Employed</option>
+                <option value="Nil">Nil</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="vocational_assessment_conducted"
+                >Vocational Assessment Conducted?</label
+              >
+              <select
+                name="vocational_assessment_conducted"
+                id="whether-vocational-assessment-conducted"
+              >
+                <option
+                  value="<%=user.details.economic_status.vocational_assessment_conducted%>"
+                >
+                  Selected :
+                  <%=user.details.economic_status.vocational_assessment_conducted%>
+                </option>
+
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="employment_skill">Employment Skill</label>
+              <select name="employment_skill" id="employment-skill">
+                <option
+                  value="<%=user.details.economic_status.employment_skill%>"
+                >
+                  Selected : <%=user.details.economic_status.employment_skill%>
+                </option>
+
+                <option value="Computer">Computer</option>
+                <option value="Clerical">Clerical</option>
+                <option value="Accounting">Accounting</option>
+                <option value="Teaching">Teaching</option>
+                <option value="Marketing">Marketing</option>
+                <option value="Agriculture">Agriculture</option>
+                <option value="Animal Husbandry">Animal Husbandry</option>
+                <option value="Food Processing">Food Processing</option>
+                <option value="Poultry">Poultry</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="training_needs">Training needs</label>
+              <select name="training_needs" id="training-needs">
+                <option
+                  value="<%=user.details.economic_status.training_needs%>"
+                >
+                  Selected : <%=user.details.economic_status.training_needs%>
+                </option>
+
+                <option value="Computer">Computer</option>
+                <option value="Clerical">Clerical</option>
+                <option value="Accounting">Accounting</option>
+                <option value="Teaching">Teaching</option>
+                <option value="Marketing">Marketing</option>
+                <option value="Agriculture">Agriculture</option>
+                <option value="Animal Husbandry">Animal Husbandry</option>
+                <option value="Food Processing">Food Processing</option>
+                <option value="Poultry">Poultry</option>
+                <option value="Open School">Open School</option>
+                <option value="ITI">ITI</option>
+                <option value="Competitive Exam">Competitive Exam</option>
+                <option value="Scholarship">Scholarship</option>
+                <option value="Public Exam">Public Exam</option>
+                <option value="Communication">Communication</option>
+                <option value="Personality Development">
+                  Personality Development
+                </option>
+                <option value="Artistic Talent">Artistic Talent</option>
+                <option value="Sports Training">Sports Training</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="financial_need">Financial Need</label>
+              <select name="financial_need" id="financial-need">
+                <option
+                  value="<%=user.details.economic_status.financial_need%>"
+                >
+                  Selected : <%=user.details.economic_status.financial_need%>
+                </option>
+
+                <option value="Self Employment">Self Employment</option>
+                <option value="Bank loan">Bank loan</option>
+                <option value="Entrepreneurial Assistance">
+                  Entrepreneurial Assistance
+                </option>
+                <option value="MNREGS Employment">MNREGS Employment</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="personal-income">Personal Income</label>
+              <input
+                type="number"
+                name="personal_income"
+                id="personal-income"
+                placeholder="₹ 0.00"
+                value="<%=user.details.economic_status.personal_income%>"
+              />
+            </div>
+            <div class="form-group">
+              <label for="annual_income">Annual Income</label>
+              <input
+                type="number"
+                name="annual_income"
+                id="annual-income"
+                placeholder="₹ 0.00"
+                value="<%=user.details.economic_status.annual_income%>"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!--Section IV : Education Status-->
+        <div class="containerHigh">
+          <h2>Education Status</h2>
+          <div class="main-container">
+            <div class="form-group">
+              <label for="educational_level">Educational level</label>
+              <select name="educational_level" id="educational-level">
+                <option
+                  value="<%=user.details.education_status.educational_level%>"
+                >
+                  Selected :
+                  <%=user.details.education_status.educational_level%>
+                </option>
+
+                <option value="Special ED">Special ED</option>
+                <option value="LP">LP</option>
+                <option value="UP">UP</option>
+                <option value="HS">HS</option>
+                <option value="+2">+2</option>
+                <option value="PG">PG</option>
+                <option value="Technical">Technical</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="strain_associated_during_education"
+                >Strain associaled during education</label
+              >
+              <select
+                name="strain_associated_during_education"
+                id="strain-associaled-during-education"
+              >
+                <option
+                  value="<%=user.details.education_status.strain_associated_during_education%>"
+                >
+                  Selected :
+                  <%=user.details.education_status.strain_associated_during_education%>
+                </option>
+
+                <option value="Communication">Communication</option>
+                <option value="Transportation">Transportation</option>
+                <option value="Financial">Financial</option>
+                <option value="Unfriendly School">Unfriendly School</option>
+                <option value="Sensory Deficiency">Sensory Deficiency</option>
+                <option value="Lack of special teachers">
+                  Lack of special teachers
+                </option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="category_of_educational_institution"
+                >Category of educational institution</label
+              >
+              <select
+                name="category_of_educational_institution"
+                id="category-of-educational-institution"
+              >
+                <option
+                  value="<%=user.details.education_status.category_of_educational_institution%>"
+                >
+                  Selected :
+                  <%=user.details.education_status.category_of_educational_institution%>
+                </option>
+
+                <option value="General School">General School</option>
+                <option value="Special School">Special School</option>
+                <option value="Open School">Open School</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <div class="question">
+                <label for="whether_vocational_training_received_yes_or_no"
+                  >Whether vocational training received</label
+                >
+                <select
+                  id="whether-vocational-training-received"
+                  name="whether_vocational_training_received_yes_or_no" class="question-select"
+                >
+                  <option value="no">No</option>
+                  <option value="yes">Yes</option>
+                </select>
+                <div class="dropdown">
+                  <label for="vocational-training-source">Source:</label>
+                  <select id="vocational-training-source" name="whether_vocational_training_received">
+                    <option value="kud">Kud</option>
+                    <option value="NYC">NYC</option>
+                    <option value="KASE">KASE</option>
+                    <option value="">Youth Welfare</option>
+                    <option value="SJD">SJD</option>
+                    <option value="HWC/NGOs">HWC/NGOs</option>
+                    <option value="LSDs">LSGs</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--Section V : Health Status-->
+        <div class="containerHigh">
+          <h2>Health Status</h2>
+          <div class="main-container">
+            <div class="form-group">
+              <div class="question">
+                <label for="member-of-gov-inst"
+                  >Are you a member of Government Institution</label
+                >
+                <select id="member-of-gov-inst" name="are_you_a_member_of_government_institution" class="question-select">
+                  <option value="no">No</option>
+                  <option value="yes">Yes</option>
+                </select>
+                <div class="dropdown">
+                  <label for="gov-inst">Govt Insu:</label>
+                  <select id="gov-inst" name="government_institution">
+                    <option value="RSBY">RSBY</option>
+                    <option value="Aswaskiranam">Aswaskiranam</option>
+                    <option value="Nirmaya">Nirmaya</option>
+                    <option value="PMJAY">PMJAY</option>
+                  </select>
+                  <label for="gov-insu-mark">Mark:</label>
+                  <input
+                    type="number"
+                    name="mark"
+                    id="gov-insu-mark"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="received_assistance_from_CMDRF_or_KSSM"
+                >Received assistance from CMDRF/KSSM</label
+              >
+              <select
+                name="received_assistance_from_CMDRF_or_KSSM"
+                id="received-assistance-from-cmdrf"
+              >
+                <option
+                  value="<%=user.details.health_status_1.received_assistance_from_CMDRF_or_KSSM%>"
+                >
+                  Selected :
+                  <%=user.details.health_status_1.received_assistance_from_CMDRF_or_KSSM%>
+                </option>
+
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="have_you_taken_compulsory_immunisation"
+                >Have you taken compulsory immunisation</label
+              >
+              <select
+                name="have_you_taken_compulsory_immunisation"
+                id="taken-compulsory-immunisation"
+              >
+                <option
+                  value="<%=user.details.health_status_1.have_you_taken_compulsory_immunisation%>"
+                >
+                  Selected :
+                  <%=user.details.health_status_1.have_you_taken_compulsory_immunisation%>
+                </option>
+
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="type_of_health_method_you_mainly_adopt"
+                >Type of health method you mainly adopt</label
+              >
+              <select
+                name="type_of_health_method_you_mainly_adopt"
+                id="type-of-health-method"
+              >
+                <option
+                  value="<%=user.details.health_status_1.type_of_health_method_you_mainly_adopt%>"
+                >
+                  Selected :
+                  <%=user.details.health_status_1.type_of_health_method_you_mainly_adopt%>
+                </option>
+
+                <option value="Alopathy">Alopathy</option>
+                <option value="Homoeo">Homoeo</option>
+                <option value="Unani">Unani</option>
+                <option value="Ayurveda">Ayurveda</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <div class="question">
+                <label for="do_you_regularly_depend_on_medicine_yes_or_no"
+                  >Do you regularly depend on medicine</label
+                >
+                <select id="regularly-dependence-on-medicine" name="do_you_regularly_depend_on_medicine_yes_or_no" class="question-select">
+                  <option value="no">No</option>
+                  <option value="yes">Yes</option>
+                </select>
+                <div class="dropdown">
+                  <label for="type-of-medicine">Type:</label>
+                  <textarea
+                    name="type"
+                    id="type-of-medicine"
+                  ></textarea>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="recurring_ailments_if_any_mention"
+                >Recurring Ailments if any Mention</label
+              >
+              <input
+                type="text"
+                name="recurring_ailments_if_any_mention"
+                id="recurring-ailments"
+                value="<%=user.details.health_status_1.recurring_ailments_if_any_mention%>"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="containerHigh">
+          <h2>Health Status</h2>
+          <div class="main-container">
+            <div class="form-group">
+              <label for="in_case_of_children_nutritional_status"
+                >In case of children, nutritional Status</label
+              >
+              <select
+                name="in_case_of_children_nutritional_status"
+                id="children-nutritional-status"
+              >
+                <option
+                  value="<%=user.details.health_status_2.in_case_of_children_nutritional_status%>"
+                >
+                  Selected :
+                  <%=user.details.health_status_2.in_case_of_children_nutritional_status%>
+                </option>
+
+                <option value="Mild">Mild</option>
+                <option value="Moderate">Moderate</option>
+                <option value="Severe">Severe</option>
+                <option value="Profound">Profound</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="any_development_delay_identified"
+                >Any development Delay identified</label
+              >
+              <select
+                name="any_development_delay_identified"
+                id="development-delay"
+              >
+                <option
+                  value="<%=user.details.health_status_2.any_development_delay_identified%>"
+                >
+                  Selected :
+                  <%=user.details.health_status_2.any_development_delay_identified%>
+                </option>
+
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label
+                for="do_you_experience_any_problem_under_intellectual_capacity"
+                >Do you experience any problem under intellectual
+                capacity</label
+              >
+              <select
+                name="do_you_experience_any_problem_under_intellectual_capacity"
+                id="problem-under-intellectual-capacity"
+              >
+                <option
+                  value="<%=user.details.health_status_2.do_you_experience_any_problem_under_intellectual_capacity%>"
+                >
+                  Selected :
+                  <%=user.details.health_status_2.do_you_experience_any_problem_under_intellectual_capacity%>
+                </option>
+
+                <option value="Logical Thinking">Logical Thinking</option>
+                <option value="Planing">Planing</option>
+                <option value="Organisation">Organisation</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="do_you_have_any_locomotor_problem"
+                >Do you have any locomotor problem</label
+              >
+              <select
+                name="do_you_have_any_locomotor_problem"
+                id="locomotor-problem"
+              >
+                <option
+                  value="<%=user.details.health_status_2.do_you_have_any_locomotor_problem%>"
+                >
+                  Selected :
+                  <%=user.details.health_status_2.do_you_have_any_locomotor_problem%>
+                </option>
+
+                <option value="Bedridden">Bedridden</option>
+                <option value="Wheel Chair">Wheel Chair</option>
+                <option value="Recurrent care">Recurrent care</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="comorbidity">Comorbidity</label>
+              <select name="comorbidity" id="comorbidity">
+                <option value="<%=user.details.health_status_2.comorbidity%>">
+                  Selected : <%=user.details.health_status_2.comorbidity%>
+                </option>
+
+                <option value="Epilepsy">Epilepsy</option>
+                <option value="Mental Issue">Mental Issue</option>
+                <option value="Anxiety">Anxiety</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!--Section VI : Rehabilation Needs-->
+        <div class="containerHigh">
+          <h2>Rehabilation Needs</h2>
+          <div class="main-container">
+            <div class="form-group">
+              <label for="the_assistance_required_to_overcome_the_problem"
+                >The assistance required to overcome the problem</label
+              >
+              <select
+                name="the_assistance_required_to_overcome_the_problem"
+                id="assistance-required-to-overcome-the-problem"
+              >
+                <option
+                  value="<%=user.details.rehabilation_needs.the_assistance_required_to_overcome_the_problem%>"
+                >
+                  Selected :
+                  <%=user.details.rehabilation_needs.the_assistance_required_to_overcome_the_problem%>
+                </option>
+
+                <option value="Education">Education</option>
+                <option value="Vocational Training">Vocational Training</option>
+                <option value="Training">Training</option>
+                <option value="Employment">Employment</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <div class="question">
+                <label
+                  for="the_skill_acquired_in_arts_or_sports_if_any_yes_or_no"
+                  >The skill acquired in arts or sports if any</label
+                >
+                <select
+                  id="skill-acquired-in-arts-or-sports-if-any"
+                  name="the_skill_acquired_in_arts_or_sports_if_any_yes_or_no" class="question-select"
+                >
+                  <option value="no">No</option>
+                  <option value="yes">Yes</option>
+                </select>
+                <div class="dropdown">
+                  <label for="skill-area">Skill Area:</label>
+                  <select id="skill-area" name="skill_area">
+                    <option value="Arts">Arts</option>
+                    <option value="Sports">Sports</option>
+                    <option value="Handicrafts">Handicrafts</option>
+                  </select>
+                  <label for="if-talented-why-not-trained"
+                    >If talented Why not trained:</label
+                  >
+                  <select
+                    name="if-talented-why-not-trained"
+                    id="if-talented-why-not-trained"
+                  >
+                    <option value="Lack of opportunity">
+                      Lack of opportunity
+                    </option>
+                    <option value="Financial Constraints">
+                      Financial Constraints
+                    </option>
+                    <option value="Lack of support">Lack of support</option>
+                    <option value="Loco moto deficiency">
+                      Loco moto deficiency
+                    </option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="professional_course_completed"
+                >Professional Course completed</label
+              >
+              <select
+                name="professional_course_completed"
+                id="professional-course-completed"
+              >
+                <option
+                  value="<%=user.details.rehabilation_needs.professional_course_completed%>"
+                >
+                  Selected :
+                  <%=user.details.rehabilation_needs.professional_course_completed%>
+                </option>
+
+                <option value="Teaching">Teaching</option>
+                <option value="Social Work">Social Work</option>
+                <option value="Law">Law</option>
+                <option value="Other">Other</option>
+                <option value="Nil">Nil</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="completed_vocational_area"
+                >Completed vocational area</label
+              >
+              <select
+                name="completed_vocational_area"
+                id="completed-vocational-area"
+              >
+                <option
+                  value="<%=user.details.rehabilation_needs.completed_vocational_area%>"
+                >
+                  Selected :
+                  <%=user.details.rehabilation_needs.completed_vocational_area%>
+                </option>
+
+                <option value="Handicrafts">Handicrafts</option>
+                <option value="Fashion Designing">Fashion Designing</option>
+                <option value="Farming">Farming</option>
+                <option value="Other">Other</option>
+                <option value="Nil">Nil</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="non_availability_of_rehabilitation_on_support"
+                >Non availability of rehabilitation on support</label
+              >
+              <select
+                name="non_availability_of_rehabilitation_on_support"
+                id="non-availability-of-rehabilitation-on-support"
+              >
+                <option
+                  value="<%=user.details.rehabilation_needs.completed_vocational_area%>"
+                >
+                  Selected :
+                  <%=user.details.rehabilation_needs.non_availability_of_rehabilitation_on_support%>
+                </option>
+
+                <option value="Physio therapy">Physio therapy</option>
+                <option value="Speech therapy">Speech therapy</option>
+                <option value="Developmental therapy">
+                  Developmental therapy
+                </option>
+                <option value="Remedial therapy">Remedial therapy</option>
+                <option value="Community Home">Community Home</option>
+                <option value="Convenient VTC">Convenient VTC</option>
+                <option value="Special NHG">Special NHG</option>
+                <option value="Cottage work training">
+                  Cottage work training
+                </option>
+                <option value="Day care facility">Day care facility</option>
+                <option value="Craft work for bedridden">
+                  Craft work for bedridden
+                </option>
+                <option value="Palliative nursing">Palliative nursing</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!--Section VII : Barriers felt at home-->
+        <div class="containerHigh">
+          <h2>Barriers felt at home</h2>
+          <div class="main-container">
+            <div class="form-group">
+              <label for="barrier_free_physical_facilities_at_home"
+                >Barrier free physical facilities at home</label
+              >
+              <select
+                name="barrier_free_physical_facilities_at_home"
+                id="barrier-free-physical-facilities-at-home"
+              >
+                <option
+                  value="<%=user.details.barriers_felt_at_home.barrier_free_physical_facilities_at_home%>"
+                >
+                  Selected :
+                  <%=user.details.barriers_felt_at_home.barrier_free_physical_facilities_at_home%>
+                </option>
+
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="if_not_BFE_the_deficiency"
+                >If not BFE the deficiency</label
+              >
+              <select
+                name="if_not_BFE_the_deficiency"
+                id="if-not-bfe-the-deficiency"
+              >
+                <option
+                  value="<%=user.details.barriers_felt_at_home.if_not_BFE_the_deficiency%>"
+                >
+                  Selected :
+                  <%=user.details.barriers_felt_at_home.if_not_BFE_the_deficiency%>
+                </option>
+
+                <option value="No Handrail">No Handrail</option>
+                <option value="No Ramps">No Ramps</option>
+                <option value="Doorstep Barriers">Doorstep Barriers</option>
+                <option value="Lack of mobility equipments">
+                  Lack of mobility equipments
+                </option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="availability_of_disabled_friendly_toilets"
+                >Availability of disabled friendly toilets</label
+              >
+              <select
+                name="availability_of_disabled_friendly_toilets"
+                id="availability-of-disabled-friendly-toilets"
+              >
+                <option
+                  value="<%=user.details.barriers_felt_at_home.availability_of_disabled_friendly_toilets%>"
+                >
+                  Selected :
+                  <%=user.details.barriers_felt_at_home.availability_of_disabled_friendly_toilets%>
+                </option>
+
+                <option value="Available">Available</option>
+                <option value="Not Available">Not Available</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="whether_family_permit_to_travel_outside"
+                >Whether family permit to travel outside</label
+              >
+              <select
+                name="whether_family_permit_to_travel_outside"
+                id="whether-family-permit-to-travel-outside"
+              >
+                <option
+                  value="<%=user.details.barriers_felt_at_home.whether_family_permit_to_travel_outside%>"
+                >
+                  Selected :
+                  <%=user.details.barriers_felt_at_home.whether_family_permit_to_travel_outside%>
+                </option>
+
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="do-you-participate-decision-making-at-home"
+                >Do you participate decision making at home</label
+              >
+              <select
+                name="do-you-participate-decision-making-at-home"
+                id="do-you-participate-decision-making-at-home"
+                onchange="ifNotReason()"
+              >
+                <option value="no">No</option>
+                <option value="yes">Yes</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="if-not-decision-making-at-home-why"
+                >If not, Why</label
+              >
+              <select
+                name="if-not-decision-making-at-home-why"
+                id="if-not-decision-making-at-home-why"
+              >
+                <option value="Opinion not asked">Opinion not asked</option>
+                <option value="Opinion not considered">
+                  Opinion not considered
+                </option>
+                <option value="Opinion not expressed">
+                  Opinion not expressed
+                </option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!--Section VII : Barriers felt at Public Space-->
+        <div class="containerHigh">
+          <h2>Barriers felt at Public Space</h2>
+          <div class="main-container">
+            <div class="form-group">
+              <label for="do-you-go-outside-for-personnel-purpose"
+                >Do you go outside for personnel purpose</label
+              >
+              <select
+                name="do-you-go-outside-for-personnel-purpose"
+                id="do-you-go-outside-for-personnel-purpose"
+                onchange="YesAndNo()"
+              >
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="if-yes-where-do-you-visit"
+                >If Yes, Where do you visit</label
+              >
+              <select
+                name="if-yes-where-do-you-visit"
+                id="if-yes-where-do-you-visit"
+              >
+                <option value="Shop">Shop</option>
+                <option value="Hospital">Hospital</option>
+                <option value="Entertainment">Entertainment</option>
+                <option value="Other purpose">Other purpose</option>
+              </select>
+              <label for="if-you-dont-visit-places-why"
+                >If you don't visit places, Why?</label
+              >
+              <select
+                name="if-you-dont-visit-places-why"
+                id="if-you-dont-visit-places-why"
+              >
+                <option value="Lack of helpers">Lack of helpers</option>
+                <option value="Lack of vehicle">Lack of vehicle</option>
+                <option value="Discrimination">Discrimination</option>
+                <option value="Loco Moto deficiency">
+                  Loco Moto deficiency
+                </option>
+                <option value="Lack of interest">Lack of interest</option>
+                <option value="Lack of public transport">
+                  Lack of public transport
+                </option>
+                <option value="Lack of permission">Lack of permission</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="is_your_workplace_differently_abled_friendly"
+                >Is your workplace differently abled friendly</label
+              >
+              <select
+                name="is_your_workplace_differently_abled_friendly"
+                id="is-your-workplace-differently-abled-friendly"
+              >
+                <option
+                  value="<%=user.details.barriers_felt_at_public_space.is_your_workplace_differently_abled_friendly%>"
+                >
+                  Selected :
+                  <%=user.details.barriers_felt_at_public_space.is_your_workplace_differently_abled_friendly%>
+                </option>
+
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label
+                for="whether_the_private_institutions_are_differently_abled"
+                >Whether the private institutions are differently abled</label
+              >
+              <select
+                name="whether_the_private_institutions_are_differently_abled"
+                id="whether-the-private-institutions-are-differently-abled"
+              >
+                <option
+                  value="<%=user.details.barriers_felt_at_public_space.whether_the_private_institutions_are_differently_abled%>"
+                >
+                  Selected :
+                  <%=user.details.barriers_felt_at_public_space.whether_the_private_institutions_are_differently_abled%>
+                </option>
+
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label
+                for="can_you_give_the_names_of_places_not_differently_adled_friendly"
+                >Can you give the names of places not differently adled
+                friendly</label
+              >
+              <select
+                name="can_you_give_the_names_of_places_not_differently_adled_friendly"
+                id="can-you-give-the-names-of-places-not-differently-adled-friendly"
+              >
+                <option
+                  value="<%=user.details.barriers_felt_at_public_space.can_you_give_the_names_of_places_not_differently_adled_friendly%>"
+                >
+                  Selected :
+                  <%=user.details.barriers_felt_at_public_space.can_you_give_the_names_of_places_not_differently_adled_friendly%>
+                </option>
+
+                <option value="Home">Home</option>
+                <option value="School">School</option>
+                <option value="Panchayath">Panchayath</option>
+                <option value="PHC">PHC</option>
+                <option value="Bus Stop">Bus Stop</option>
+                <option value="Markets">Markets</option>
+                <option value="Religious place">Religious place</option>
+                <option value="Bus">Bus</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label
+                for="which_are_the_places_that_to_be_converted_friendly_immediately"
+                >Which are the places that to be converted friendly,
+                immediately</label
+              >
+              <input
+                type="text"
+                value="<%=user.details.barriers_felt_at_public_space.which_are_the_places_that_to_be_converted_friendly_immediately%>"
+                name="which_are_the_places_that_to_be_converted_friendly_immediately"
+                id="which-are-the-places-that-to-be-converted-friendly-immediately"
+              />
+            </div>
+          </div>
+        </div>
+      </form>
     </main>
+  </div>
+  <script src="script.js"></script>
 </body>
 </html>
