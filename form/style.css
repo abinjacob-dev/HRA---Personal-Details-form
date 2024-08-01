@@ -7,9 +7,9 @@
     --primary-hover-color: #0056b3;
     --button-color:#fff;
 }
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
     display: none;
-}
+} */
 *
 {
     margin: 0;
@@ -17,11 +17,11 @@
     box-sizing: border-box;
 }
 
-body
+/* .body
 {
     font-family: Arial, sans-serif;
     background-color: var(--background-color);
-}
+} */
 .containerHigh
 {
     display: flex;
@@ -30,13 +30,10 @@ body
     flex-direction: column;
     margin-top: 10px;
     margin-bottom: 10px;
+    width: 100%;
+    background: var(--white);
 }
-h1{
-    text-align: center;
-    padding: 10px;
-    background-color: rgb(0, 209, 94);
-    color: white;
-}
+
 h2
 {
     text-align: center;
@@ -46,7 +43,7 @@ h2
     padding: 10px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
-    width: 800px;
+    width: 99%;
     
 }
 .main-container
@@ -56,7 +53,7 @@ h2
     grid-template-rows: repeat();
     grid-column-gap: 10px;
     grid-row-gap: 0px;
-    width: 800px;
+    width: 99%;
     padding: 10px;
     background-color: var(--container-background-color);
     border-bottom-left-radius: 10px;
@@ -66,14 +63,14 @@ h2
 }
 
 .form-group {
-    width: 350px;
+    width: 100%;
     padding: 10px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end
 }
 
-label {
+.personal-info-form label {
     display: block;
     font-weight: bold;
     margin-bottom: 5px;
@@ -141,7 +138,7 @@ label[for='applied-or-not-informed']{
     }
     .containerHigh
     {
-        width: 100vw;
+        width: 106%;
         overflow: hidden;
         align-items: center;
     }
